@@ -47,7 +47,7 @@ export default function NgohiongExpress() {
                 <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
                 <div className="flex flex-wrap gap-4 mt-6">
                     <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" />
-                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress" />
+                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon"/>
                     <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" />
                 </div>
             </section>

@@ -8,7 +8,7 @@ export default function NavBar(){
 
         <div >
             <Link className="font-serif italic text-[1.2rem] font-bold text-white md:text-[1.5rem]" 
-            to="/"> 
+            to="/Home"> 
             <span className="text-[#6FAF4F] text-4xl">Cebu</span>
             <span className="text-[#C44A3A] text-4xl">Bites</span>         
             </Link>
