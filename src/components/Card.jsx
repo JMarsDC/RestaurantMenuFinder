@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export default function Card({restaurants, activeCategory}){
 const filteredRestaurants = restaurants.filter(
@@ -7,7 +8,7 @@ const filteredRestaurants = restaurants.filter(
     return(
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {filteredRestaurants.map((restaurant) => (
-          <div
+          <Link to={restaurant.getPath()}
             key={restaurant.getRestaurantId()} 
             className="p-6 bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-all"
           >
@@ -20,7 +21,7 @@ const filteredRestaurants = restaurants.filter(
               {restaurant.getName()}
             </h3>
 
-          </div>
+          </Link>
         ))}
       </div>
     );

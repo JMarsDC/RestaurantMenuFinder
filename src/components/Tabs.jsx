@@ -9,7 +9,7 @@ return(
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer font-medium transition-colors pb-1 whitespace-nowrap ${
+              className={`cursor-pointer font-medium transition-colors ${
                 activeCategory === category
                   ? "text-orange-600 border-b-2 border-orange-600"
                   : "text-gray-500 hover:text-orange-500"

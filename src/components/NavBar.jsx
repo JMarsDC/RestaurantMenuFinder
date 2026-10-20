@@ -15,8 +15,8 @@ export default function NavBar(){
             <Link to="/Home" className="font-serif rounded-3xl px-2 py-2 text-base text-[#FDFBF7] 
             transition-colors duration-200 hover:bg-[#f3b645] md:px-4">Home </Link>
 
-            <Link to="/" className="font-serif rounded-3xl px-2 py-2 text-base text-[#FDFBF7] 
-            transition-colors duration-200 hover:bg-[#f3b645] md:px-4">Restaurants</Link>
+            <a href="#Restaurants" className="font-serif rounded-3xl px-2 py-2 text-base text-[#FDFBF7] 
+            transition-colors duration-200 hover:bg-[#f3b645] md:px-4">Restaurants</a>
 
         </div>
     </nav>

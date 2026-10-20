@@ -1,11 +1,12 @@
 
 export default class Restaurant {
-  constructor(id, name, cuisineType, shopType, imageUrl) {
+  constructor(id, name, cuisineType, shopType, imageUrl, path) {
     this.id = id;
     this.name = name;
     this.cuisineType = cuisineType;
     this.shopType = shopType;
     this.imageUrl = imageUrl;
+    this.path = path;
   }
 
   // Method from your class diagram
@@ -27,6 +28,10 @@ export default class Restaurant {
 
   getImage(){
     return this.imageUrl;
+  }
+
+  getPath(){
+    return this.path;
   }
 
   // Method to fetch menu items belonging to this restaurant
