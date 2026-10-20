@@ -1,15 +1,25 @@
 
-export default function Card({categoryData, activeCategory}){
+export default function Card({restaurants, activeCategory}){
+const filteredRestaurants = restaurants.filter(
+      (restaurant) => restaurant.getCuisineType() === activeCategory
+    );
+
     return(
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        {categoryData[activeCategory].map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        {filteredRestaurants.map((restaurant) => (
           <div
-            key={index} 
+            key={restaurant.getRestaurantId()} 
             className="p-6 bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-all"
           >
-            <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
-            <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
+            {/* Using your Class Getters */}
+            <span className="text-xs font-semibold px-3 py-1 bg-orange-100 text-orange-600 rounded-full">
+              {restaurant.getShopType()}
+            </span>
             
+            <h3 className="text-xl font-bold text-gray-800 mt-3">
+              {restaurant.getName()}
+            </h3>
+
           </div>
         ))}
       </div>

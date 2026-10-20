@@ -1,16 +1,15 @@
 
-export default function Tabs({ title, categoryData, activeCategory, setActiveCategory }){
-    return(
-      <div className="flex justify-between items-center py-6">
-        <h1 className="text-3xl font-extrabold">{title}</h1>
+export default function Tabs({title, categories, activeCategory, setActiveCategory}){
+return(
+      <div className="flex flex-col md:flex-row justify-between items-center py-6 gap-4 border-b border-gray-100">
+        <h1 className="text-3xl font-extrabold text-gray-800">{title}</h1>
 
-        <div className="flex space-x-6 overflow-x-auto">
-          {Object.keys(categoryData).map((category) => (
+        <div className="flex space-x-6 overflow-x-auto pb-2">
+          {categories.map((category) => (
             <button
               key={category}
-              // 2. Update state on click without page refresh
               onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer font-medium transition-colors pb-1 ${
+              className={`cursor-pointer font-medium transition-colors pb-1 whitespace-nowrap ${
                 activeCategory === category
                   ? "text-orange-600 border-b-2 border-orange-600"
                   : "text-gray-500 hover:text-orange-500"
@@ -19,7 +18,6 @@ export default function Tabs({ title, categoryData, activeCategory, setActiveCat
               {category}
             </button>
           ))}
-          
         </div>
       </div>
     );
