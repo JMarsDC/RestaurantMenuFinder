@@ -11,31 +11,31 @@ export default class MenuItem {
   }
 
   // Method from your class diagram
-  getMenuId(){
+  getMenuId() {
     return this.id;
   }
 
-  getRestaurantId(){
+  getRestaurantId() {
     return this.restaurantId;
   }
 
-  getName(){
+  getName() {
     return this.name;
   }
 
-  getPrice(){
+  getPrice() {
     return this.price;
   }
 
-  getDescription(){
+  getDescription() {
     return this.description;
   }
 
-  getCategory(){
+  getCategory() {
     return this.category;
   }
 
-  getImage(){
+  getImage() {
     return this.imageUrl;
   }
 }

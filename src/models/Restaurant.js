@@ -9,32 +9,30 @@ export default class Restaurant {
     this.path = path;
   }
 
-  // Method from your class diagram
   getRestaurantId() {
     return this.id;
   }
 
-  getName(){
+  getName() {
     return this.name;
   }
 
-  getCuisineType(){
+  getCuisineType() {
     return this.cuisineType;
   }
 
-  getShopType(){
+  getShopType() {
     return this.shopType;
   }
 
-  getImage(){
+  getImage() {
     return this.imageUrl;
   }
 
-  getPath(){
+  getPath() {
     return this.path;
   }
 
-  // Method to fetch menu items belonging to this restaurant
   getMenu(menuItemsArray) {
     return menuItemsArray.filter(item => item.restaurantId === this.id);
   }

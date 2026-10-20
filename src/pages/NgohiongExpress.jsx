@@ -21,7 +21,7 @@ export default function NgohiongExpress() {
 
     return (
         <>
-            <HeroBanner Title1="Ngohiong" Title2="Express" image="..." />
+            <HeroBanner Title1="Ngohiong" Title2="Express" image="/images/NGOICON.jpeg" />
 
             <section className="relative w-full max-w-7xl mx-auto">
 
@@ -46,9 +46,9 @@ export default function NgohiongExpress() {
 
                 <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
                 <div className="flex flex-wrap gap-4 mt-6">
-                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" />
-                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon"/>
-                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" />
+                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" src="/images/PAOS.jpeg"/>
+                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon" src="/images/ZUBS.jpeg"/>
+                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" src="/images/LEOS.jpeg"/>
                 </div>
             </section>
 

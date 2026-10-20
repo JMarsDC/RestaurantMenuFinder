@@ -14,8 +14,9 @@ export default function HeroBanner({ Title1, Title2, image }) {
 
         <div className="relative flex items-center justify-center w-full lg:w-1/2 min-h-[380px]">
 
-          <div className="w-64 h-80 bg-orange-200/40 rounded-3xl border-2 border-dashed border-orange-100 flex items-center justify-center text-white font-bold text-sm shadow-inner">
-            [ HERO IMAGE BOX ]
+          <div className="w-full h-80 bg-orange-200/40 rounded-3xl border-2 border-dashed border-orange-100 flex items-center justify-center text-white font-bold text-sm shadow-inner">
+            <img src={image}
+            className="rounded-3xl"/>
           </div>
         </div>
 

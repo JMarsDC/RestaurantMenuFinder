@@ -21,7 +21,7 @@ export default function Zubuchon() {
 
     return (
         <>
-            <HeroBanner Title1="Zubuchon" image="..." />
+            <HeroBanner Title1="Zubuchon" image="/images/ZUBUICON.jpeg" />
 
             <section className="relative w-full max-w-7xl mx-auto">
 
@@ -46,9 +46,9 @@ export default function Zubuchon() {
 
                 <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
                 <div className="flex flex-wrap gap-4 mt-6">
-                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" />
-                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress" />
-                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" />
+                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" src="/images/PAOS.jpeg"/>
+                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress" src="/images/NGOS.jpeg" />
+                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" src="/images/LEOS.jpeg"/>
                 </div>
             </section>
 

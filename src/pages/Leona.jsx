@@ -21,7 +21,7 @@ export default function Leona() {
 
     return (
         <>
-            <HeroBanner Title1="Leona's" Title2="Pastries & Cakes" image="..." />
+            <HeroBanner Title1="Leona's" Title2="Pastries & Cakes" image="/images/LEONAICON.jpeg" />
 
             <section className="relative w-full max-w-7xl mx-auto">
 
@@ -46,9 +46,9 @@ export default function Leona() {
 
                 <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
                 <div className="flex flex-wrap gap-4 mt-6">
-                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" />
-                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon"/>
-                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress"/>
+                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" src="/images/PAOS.jpeg"/>
+                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon" src="/images/ZUBS.jpeg"/>
+                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress" src="/images/NGOS.jpeg" />
                 </div>
             </section>
 

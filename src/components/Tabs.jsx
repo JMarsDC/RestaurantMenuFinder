@@ -10,8 +10,8 @@ export default function Tabs({ title, categories, activeCategory, setActiveCateg
             key={category}
             onClick={() => setActiveCategory(category)}
             className={`cursor-pointer font-medium transition-colors ${activeCategory === category
-                ? "text-orange-600 border-b-2 border-orange-600"
-                : "text-gray-500 hover:text-orange-500"
+              ? "text-orange-600 border-b-2 border-orange-600"
+              : "text-gray-500 hover:text-orange-500"
               }`}
           >
             {category}

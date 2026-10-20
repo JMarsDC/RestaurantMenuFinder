@@ -21,7 +21,7 @@ export default function Paolito() {
 
     return (
         <>
-            <HeroBanner Title1="Paolito's" Title2="STK ta BAI!" image="..." />
+            <HeroBanner Title1="Paolito's" Title2="STK ta BAI!" image="/images/PAO.jpeg" />
 
             <section className="relative w-full max-w-7xl mx-auto">
 
@@ -46,9 +46,9 @@ export default function Paolito() {
 
                 <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
                 <div className="flex flex-wrap gap-4 mt-6">
-                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon"/>
-                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" />
-                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" />
+                    <RestaurantIcon Restaurant="Zubuchon" Path="/Zubuchon" src="/images/ZUBS.jpeg"/>
+                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress" src="/images/NGOS.jpeg" />
+                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" src="/images/LEOS.jpeg"/>
                 </div>
             </section>
 
