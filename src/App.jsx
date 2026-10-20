@@ -15,9 +15,9 @@ function App() {
 
     <main className="flex-1 p-8 box-border w-full flex flex-col">
       <Routes>
-        <Route path="/" element={<Leona />}/>
-        <Route path="/" element={<Paolito />}/>
-        <Route path="/" element={<NgohiongExpress />}/>
+        <Route path="/Leona" element={<Leona />}/>
+        <Route path="/Paolito" element={<Paolito />}/>
+        <Route path="/NgohiongExpress" element={<NgohiongExpress />}/>
         <Route path="/Zubuchon" element={<Zubuchon />}/>
         <Route path="/Home" element={<Home/>}/>
       </Routes>

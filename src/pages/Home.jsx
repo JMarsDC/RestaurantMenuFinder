@@ -16,16 +16,14 @@ return (
     <HeroBanner Title1="Feast Your Senses," Title2=" Fast and Fresh" image="..."/>
 
     <section className="relative w-full max-w-7xl mx-auto">
-      
-      {/* Header & Category Buttons */}
+
       <Tabs 
           title="Select what you crave for!" 
           categories={categories} 
           activeCategory={activeCategory} 
           setActiveCategory={setActiveCategory} 
         />
-
-      {/*Conditional Rendering: Dynamic Card Appears at the Bottom */}
+        
       <Card 
           restaurants={restaurants} 
           activeCategory={activeCategory} 

@@ -4,38 +4,53 @@ import RestaurantIcon from "../components/RestaurantIcon";
 import { restaurants, menuItems } from "../data/restaurantData";
 import Tabs from "../components/Tabs";
 import FoodCard from "../components/FoodCard";
+import SearchBar from "../components/SearchBar";
 
-export default function Zubuchon(){
+export default function Zubuchon() {
 
-const restaurantMenu = restaurants[0].getMenu(menuItems);
-const menuCategories = ["All", ...new Set(restaurantMenu.map(item => item.getCategory()))];
-const [activeCategory, setActiveCategory] = useState("All");
+    const restaurantMenu = restaurants[0].getMenu(menuItems);
+    const menuCategories = ["All", ...new Set(restaurantMenu.map(item => item.getCategory()))];
+    const [activeCategory, setActiveCategory] = useState("All");
+    const [searchQuery, setSearchQuery] = useState("")
 
-    return(
+    const filteredItems = restaurantMenu.filter(item => {
+        const matchesCategory = activeCategory === "All" || item.getCategory() === activeCategory;
+        const matchesSearch = item.getName().toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
+
+    return (
         <>
-    <HeroBanner Title1="Zubuchon" image="..."/>
+            <HeroBanner Title1="Zubuchon" image="..." />
 
-    <section className="relative w-full max-w-7xl mx-auto">
+            <section className="relative w-full max-w-7xl mx-auto">
 
-        <Tabs 
-        title="" 
-        categories={menuCategories} 
-        activeCategory={activeCategory} 
-        setActiveCategory={setActiveCategory} 
-         />
+                <div className="flex justify-end mb-6 m-4">
+                    <SearchBar
+                        searchQuery={searchQuery}
+                        setSearchQuery={setSearchQuery}
+                        placeholder="Search from menu..."
+                    />
+                </div>
 
-        <FoodCard 
-        menuItems={restaurantMenu} 
-        activeCategory={activeCategory} 
-        />
+                <Tabs
+                    title="All Offers from Zubuchon"
+                    categories={menuCategories}
+                    activeCategory={activeCategory}
+                    setActiveCategory={setActiveCategory}
+                />
 
-        <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
-            <div className="flex flex-wrap gap-4 mt-6">
-                <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito"/>
-                <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress"/>
-                <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona"/>
-            </div>
-    </section>
+                <FoodCard
+                    menuItems={filteredItems}
+                />
+
+                <h1 id="Restaurants" className="text-3xl font-extrabold text-gray-800 mt-7">Restaurants / Shops</h1>
+                <div className="flex flex-wrap gap-4 mt-6">
+                    <RestaurantIcon Restaurant="Paolito's STK ta Bai!" Path="/Paolito" />
+                    <RestaurantIcon Restaurant="Ngohiong Express" Path="/NgohiongExpress" />
+                    <RestaurantIcon Restaurant="Leona's Cakes & Pastries" Path="/Leona" />
+                </div>
+            </section>
 
 
         </>
